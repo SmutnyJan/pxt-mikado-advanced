@@ -16,7 +16,7 @@ namespace Mikado {
     */
     //% block="Zapni hlídání"
 
-    export function ZapnoutHlidani(): void {
+    export function zapnoutHlidani(): void {
         basic.showIcon(IconNames.Asleep)
         isGuarding = true
     }
@@ -26,7 +26,7 @@ namespace Mikado {
     */
     //% block="Vypni hlídání"
 
-    export function VypnoutHlidani(): void {
+    export function vypnoutHlidani(): void {
         basic.showIcon(IconNames.Happy)
         isGuarding = false
 
@@ -37,7 +37,7 @@ namespace Mikado {
     */
     //% block="Klidová hodnota"
 
-    export function KlidovaHodnota(): number {
+    export function klidovaHodnota(): number {
         return 1023
     }
 
@@ -46,7 +46,7 @@ namespace Mikado {
     */
     //% block="Vzbuď hlídače"
 
-    export function VzbuditHlidace(): void {
+    export function vzbuditHlidace(): void {
         basic.showIcon(IconNames.Angry)
         soundExpression.sad.playUntilDone()
         if (!(isGuarding)) {

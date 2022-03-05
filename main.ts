@@ -1,15 +1,15 @@
 let jeZapnutoHlidani = false
 input.onButtonPressed(Button.A, function () {
     if (jeZapnutoHlidani == false) {
-        Mikado.ZapnoutHlidani()
+        Mikado.zapnoutHlidani()
         jeZapnutoHlidani = true
     } else {
-        Mikado.VypnoutHlidani()
+        Mikado.vypnoutHlidani()
         jeZapnutoHlidani = false
     }
 })
 function detekujPohyb (tolerance: number) {
-    if (input.acceleration(Dimension.Strength) + tolerance < Mikado.KlidovaHodnota() || input.acceleration(Dimension.Strength) - tolerance > Mikado.KlidovaHodnota()) {
+    if (input.acceleration(Dimension.Strength) + tolerance < Mikado.klidovaHodnota() || input.acceleration(Dimension.Strength) - tolerance > Mikado.klidovaHodnota()) {
         return true
     } else {
         return false
@@ -17,6 +17,6 @@ function detekujPohyb (tolerance: number) {
 }
 basic.forever(function () {
     if (detekujPohyb(100) == true && jeZapnutoHlidani) {
-        Mikado.VzbuditHlidace()
+        Mikado.vzbuditHlidace()
     }
 })
