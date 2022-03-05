@@ -17,8 +17,6 @@ namespace Mikado {
     //% block="Zapni hlídání"
 
     export function ZapnoutHlidani(): void {
-        music.setBuiltInSpeakerEnabled(true)
-        basic.pause(2500)
         basic.showIcon(IconNames.Asleep)
         isGuarding = true
     }
@@ -29,7 +27,6 @@ namespace Mikado {
     //% block="Vypni hlídání"
 
     export function VypnoutHlidani(): void {
-        music.setBuiltInSpeakerEnabled(false)
         basic.showIcon(IconNames.Happy)
         isGuarding = false
 
