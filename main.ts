@@ -17,7 +17,7 @@ function detekujPohyb (tolerance: number) {
     }
 }
 basic.forever(function () {
-    if (detekujPohyb(500) == true && jeZapnutoHlidani && stavDisleje != "nastvany") {
+    if (detekujPohyb(100) == true && jeZapnutoHlidani && stavDisleje != "nastvany") {
         stavDisleje = "nastvany"
         basic.showLeds(`
             # . . . #
