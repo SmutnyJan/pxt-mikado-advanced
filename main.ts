@@ -10,7 +10,7 @@ input.onButtonPressed(Button.A, function () {
 })
 function detekujPohyb (tolerance: number) {
     akcelerace = input.acceleration(Dimension.Strength)
-    if (akcelerace + tolerance < Mikado.klidovaHodnota() || akcelerace - tolerance > Mikado.klidovaHodnota()) {
+    if (akcelerace + tolerance < mikado.normalValue() || akcelerace - tolerance > mikado.normalValue()) {
         return true
     } else {
         return false

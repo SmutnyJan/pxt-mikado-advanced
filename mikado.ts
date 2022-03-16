@@ -1,12 +1,12 @@
 //% weight=100 color=#3bccc0 icon="\uf11b" block="Mikado"
-namespace Mikado {
+namespace mikado {
 
     /**
     * Vrátí klidovou hodnotu senzoru
     */
     //% block="Klidová hodnota"
 
-    export function klidovaHodnota(): number {
+    export function normalValue(): number {
         return 1023
     }
 
